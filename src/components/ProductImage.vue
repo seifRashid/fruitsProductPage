@@ -3,7 +3,7 @@
     <img
       :src="`/images/${image_url}`"
       :alt="name"
-      class="w-[500px] h-[500px] object-cover rounded-lg"
+      class="w-[400px] h-auto object-cover rounded-lg"
     />
   </div>
 </template>

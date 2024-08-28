@@ -47,17 +47,14 @@ export const useFruitStore = defineStore('fruits', {
     },],
     index:1,
     disabled:false,
-    cursorNotAllowed:false
-    // name: 'Apple',
-    // description: 'Hello Apple, how are you doing now, I thought you were coming over, I felt so hungry and with tat it induced an unforeseen anger that makes me get loss control and I can beat someone very bad',
-    // origin: 'Kenya',
-    // season: 'Vuli, siku ya mvua',
-    // image_url: 'apple'
+    cursorNotAllowed:false,
+    cartActive:true
+  
   }),
   // Getters
-  getters: {
+  actions: {
     nextIndex() {
-      if(this.index > this.fruits.legth){
+      if(this.index == this.fruits.legth){
         this.index = 1
       } else {
         this.index += 1
@@ -70,6 +67,9 @@ export const useFruitStore = defineStore('fruits', {
       } else {
         return this.index--
       }
+    },
+    activeCart() {
+      this.cartActive = !this.cartActive
     }
   }
   // Actions

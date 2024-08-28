@@ -33,17 +33,17 @@ defineProps({
 
     <div class="flex gap-8">
       <div
-        class="bg-blue-500 text-white flex gap-1 items-center rounded-lg hover:bg-blue-600 py-2 px-3">
+        class="bg-blue-500 text-white flex gap-1 items-center rounded-lg hover:bg-blue-600 py-2 px-3 cursor-pointer">
         <i class="fas fa-chevron-left"></i>
         <button @click="fruitStore.previousIndex()" :disabled="false" :class="{cursorNotAllowed:'cursor-not-allowed'}" >Previous</button>
       </div>
       <div
-        class="bg-blue-500 text-white flex gap-1 items-center rounded-lg hover:bg-blue-600 p-2 px-3">
+        class="bg-blue-500 text-white flex gap-1 items-center rounded-lg hover:bg-blue-600 p-2 px-3 cursor-pointer">
         <button @click="fruitStore.nextIndex()" :disabled="false" :class="cursorNotAllowed">Next</button>
         <i class="fas fa-chevron-right"></i>
       </div>
       <div
-        class="bg-green-500 text-white flex gap-1 items-center rounded-lg hover:bg-green-600 p-2 px-3">
+        class="bg-green-500 text-white flex gap-1 items-center rounded-lg hover:bg-green-600 p-2 px-3 cursor-pointer">
         Add
         <i class="fas fa-cart-plus"></i>
         <button>Cart</button>
