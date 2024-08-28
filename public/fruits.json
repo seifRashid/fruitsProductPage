@@ -1,0 +1,73 @@
+[
+    {
+      "name": "Apple",
+      "description": "A sweet, crisp fruit that comes in many varieties and colors. Apples are high in fiber and vitamin C.",
+      "image_url": "images/apple.jpg",
+      "origin": "Central Asia",
+      "season": "Fall"
+    },
+    {
+      "name": "Banana",
+      "description": "A tropical fruit that is sweet and soft when ripe. Bananas are a great source of potassium.",
+      "image_url": "images/banana.jpg",
+      "origin": "Southeast Asia",
+      "season": "Year-round"
+    },
+    {
+      "name": "Orange",
+      "description": "A citrus fruit known for its juicy, tangy taste and high vitamin C content.",
+      "image_url": "images/orange.jpg",
+      "origin": "China",
+      "season": "Winter"
+    },
+    {
+      "name": "Strawberry",
+      "description": "A bright red, juicy fruit with a sweet flavor. Strawberries are high in antioxidants and vitamin C.",
+      "image_url": "https://example.com/images/strawberry.jpg",
+      "origin": "France",
+      "season": "Spring"
+    },
+    {
+      "name": "Grapes",
+      "description": "Small, sweet or tart fruits that grow in clusters. Grapes can be eaten fresh or used to make wine.",
+      "image_url": "https://example.com/images/grapes.jpg",
+      "origin": "Near East",
+      "season": "Fall"
+    },
+    {
+      "name": "Watermelon",
+      "description": "A large, juicy fruit with a thick green rind and sweet, red flesh. Watermelons are popular in the summer.",
+      "image_url": "https://example.com/images/watermelon.jpg",
+      "origin": "Southern Africa",
+      "season": "Summer"
+    },
+    {
+      "name": "Mango",
+      "description": "A tropical fruit with sweet, juicy flesh and a large pit. Mangoes are rich in vitamins A and C.",
+      "image_url": "https://example.com/images/mango.jpg",
+      "origin": "South Asia",
+      "season": "Summer"
+    },
+    {
+      "name": "Pineapple",
+      "description": "A tropical fruit with a tough, spiky exterior and sweet, tangy flesh inside.",
+      "image_url": "https://example.com/images/pineapple.jpg",
+      "origin": "South America",
+      "season": "Year-round"
+    },
+    {
+      "name": "Blueberry",
+      "description": "Small, round berries that are sweet and slightly tart. Blueberries are high in antioxidants.",
+      "image_url": "https://example.com/images/blueberry.jpg",
+      "origin": "North America",
+      "season": "Summer"
+    },
+    {
+      "name": "Peach",
+      "description": "A juicy, sweet fruit with fuzzy skin and a large pit. Peaches are popular in desserts.",
+      "image_url": "https://example.com/images/peach.jpg",
+      "origin": "China",
+      "season": "Summer"
+    }
+  ]
+  
