@@ -1,67 +1,42 @@
-// import { defineStore } from 'pinia'
 
-// export let useFruitStore = defineStore('fruits', {
-//     //data
-//     state: () => ({
-//         name: '',
-//         description: '',
-//         origin: '',
-//         season: '',
-//         image_url:''
-//     }),
-//     //methods
-//     actions: {
-//         async getFruitData() {     
-//             let r = await import('@/fruits.json');
-//                 this.$state = r.default;
-//             }
-//     }
-//     })
 
 import { defineStore } from 'pinia';
+// import fruitData from '../fruits.json'
 
 export const useFruitStore = defineStore('fruits', {
   // State
   state: () => ({
 
-    fruits: [ {
-      "name": "Apple",
-      "description": "A sweet, crisp fruit that comes in many varieties and colors. Apples are high in fiber and vitamin C.",
-      "image_url": "../images/apple.webp",
-      "origin": "Central Asia",
-      "season": "Fall"
-    },
-    {
-      "name": "Banana",
-      "description": "A tropical fruit that is sweet and soft when ripe. Bananas are a great source of potassium.",
-      "image_url": "../images/banana.webp",
-      "origin": "Southeast Asia",
-      "season": "Year-round"
-    },
-    {
-      "name": "Orange",
-      "description": "A citrus fruit known for its juicy, tangy taste and high vitamin C content.",
-      "image_url": "../images/orange.webp",
-      "origin": "China",
-      "season": "Winter"
-    },],
-    index:1,
-    disabled:false,
-    cursorNotAllowed:false,
-    cartActive:true
-  
+    fruits: [], //../images/apple.webp
+    index: 5,
+    disabled: false,
+    cursorNotAllowed: false,
+    cartActive: false,
+    cartItems: []
+
   }),
   // Getters
+  getters: {
+    prodCount() {
+      return this.cartItems.length
+    },
+    cartDisplayedItems() {
+      const uniqueById = [...new Map(this.cartItems.map(item => [item.name, item])).values()];
+      console.log(uniqueById);
+      return uniqueById
+
+    }
+  },
   actions: {
     nextIndex() {
-      if(this.index == this.fruits.legth){
+      if (this.index == this.fruits.legth) {
         this.index = 1
       } else {
         this.index += 1
       }
     },
     previousIndex() {
-      if(this.index === -1){
+      if (this.index === -1) {
         this.disabled = true
         this.cursorNotAllowed = true
       } else {
@@ -70,23 +45,21 @@ export const useFruitStore = defineStore('fruits', {
     },
     activeCart() {
       this.cartActive = !this.cartActive
+    },
+    async loadFruitData() {
+      console.log('Loading fruit data...');
+      try {
+        const data = await import('../fruits.json');
+        this.fruits = data.default; // Assuming data.default is an array of fruits
+      } catch (error) {
+        console.error('Failed to load fruit data:', error);
+      }
+    },
+    addToCart() {
+      this.cartItems.push(this.fruits[this.index].name)
     }
-  }
-  // Actions
-  // actions: {
-  //   async getFruitData() {     
-  //     try {
-  //       let r = await import('@/fruits.json');
-  //       this.name = r.default.name;
-  //       this.description = r.default.description;
-  //       this.origin = r.default.origin;
-  //       this.season = r.default.season;
-  //       this.image_url = r.default.image_url;
-  //     } catch (error) {
-  //       console.error("Failed to load fruit data:", error);
-  //     }
-  //   }
-  // }
+  },
+
 });
 
 

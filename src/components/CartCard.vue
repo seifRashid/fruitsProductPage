@@ -28,25 +28,6 @@ import { RouterLink } from 'vue-router'
       </div>
     </div>
 
-    <!-- Repeat for More Cart Items -->
-    <!-- Cart Item 2 -->
-    <div class="flex items-center justify-between p-4 bg-gray-200 rounded-lg">
-      <div class="flex items-center">
-        <img src="https://via.placeholder.com/100" alt="Product Image" class="w-20 h-20 object-cover rounded-lg">
-        <div class="ml-4">
-          <h3 class="text-lg font-semibold text-gray-800">Product Name</h3>
-          <!-- <p class="text-gray-600">Product Description</p> -->
-          <div class="mt-2">
-            <span class="text-sm text-gray-500">Quantity:</span>
-            <input type="number" min="1" value="2" class="w-12 p-1 text-center border border-gray-300 rounded-md">
-          </div>
-        </div>
-      </div>
-      <div class="text-right">
-        <p class="text-xl font-semibold text-gray-800 ml-2">$50.00</p>
-        <button class="mt-2 text-red-600 hover:text-red-800">Remove</button>
-      </div>
-    </div>
   </div>
 
   <!-- Cart Summary -->

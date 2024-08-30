@@ -17,7 +17,7 @@ stars.forEach((star) => {
 })
 </script>
 <template>
-  <div class="max-w-lg mx-auto ml-1 p-3 bg-white rounded-lg shadow-lg">
+  <div class="max-w-lg mx-auto mb-2 p-3 bg-white rounded-lg shadow-lg">
     <!-- Comment Form Header -->
     <h2 class="text-2xl font-semibold text-gray-800 mb-4">Leave a Comment</h2>
 

@@ -1,9 +1,12 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { useFruitStore } from '../stores/fruitStore.js'
+// import { ref } from 'vue';
 
-const fruitStore = useFruitStore();
+const fruitStore = useFruitStore()
 
+// let ProdCount = ref('')
+// ProdCount.value = fruitStore.ProdCount
 </script>
 <template>
   <div class="flex justify-between align-center p-4 bg-slate-900">
@@ -14,7 +17,13 @@ const fruitStore = useFruitStore();
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/store">Store</RouterLink>
       </nav>
-      <i class="fas fa-cart-plus text-green-500 text-2xl hover:text-green-700 cursor-pointer" @click="fruitStore.activeCart()"></i>
+      <div class="flex">
+        <i
+          class="fas fa-cart-plus text-green-500 text-2xl hover:text-green-700 cursor-pointer"
+          @click="fruitStore.activeCart()"
+        ></i>
+        <p class="text-l text-white ml-2">{{ fruitStore.prodCount}}</p>
+      </div>
     </div>
   </div>
 </template>

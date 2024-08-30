@@ -6,8 +6,10 @@ import CommentAndRating from '@/components/CommentAndRating.vue'
 import InsertCommentRating from '@/components/InsertCommentRating.vue'
 import CartCard from '@/components/CartCard.vue'
 
-
 const fruitStore = useFruitStore()
+
+fruitStore.loadFruitData(); // Load the data when the component mounts
+
 
 </script>
 
@@ -36,7 +38,9 @@ const fruitStore = useFruitStore()
       <InsertCommentRating />
     </div>
     <div class="w-full sm:w-1/2 px-2">
-      <CommentAndRating />
+      <div v-for="comment in fruitStore.fruits[fruitStore.index].comments" :key="comment.name">
+        <CommentAndRating :reviwer-name="comment.name" :date="comment.date" :rating="comment.rating" :review-comment="comment.comment"/>
+      </div>
     </div>
   </div>
 </template>
